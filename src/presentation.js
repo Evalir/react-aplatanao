@@ -3,15 +3,14 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
+  Image,
   List,
-  Quote,
   Slide,
   Text,
+  Layout,
 } from 'spectacle';
 
 // Import theme
@@ -22,16 +21,27 @@ require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
+    primary: '#1F2229',
+    secondary: '#F6B93A',
+    tertiary: '#62DAF9',
     quaternary: '#CECECE',
   },
   {
-    primary: 'Montserrat',
+    primary: 'Maison Neue',
     secondary: 'Helvetica',
   }
 );
+
+const images = {
+  react_logo: require('./static/react.svg'),
+  ceiss: require('./static/ceiss.png'),
+  gatsby: require('./static/gatsbyjs-icon.svg'),
+  nextjs: require('./static/nextjs.svg'),
+  reaction: require('./static/reaction-commerce.png')
+};
+
+theme.screen.components.listItem.fontSize = '2rem';
+theme.screen.components.listItem.marginBottom = '2rem';
 
 export default class Presentation extends React.Component {
   render() {
@@ -43,51 +53,97 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            React.js Aplatanao
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
+          <Heading size={6} lineHeight={1} textColor="white">
+            Enrique Ortiz
+          </Heading>
+          <Image width={'25%'} src={images.react_logo}/>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
+        <Slide transition={['fade']} bgColor="#181B1D">
+          <Heading size={3} fit caps lineHeight={1} textColor="secondary">
+              ¿Quién soy yo?
           </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <List textFont={'Poppins'}>
+            <ListItem>Software Engineering Student @INTEC</ListItem>
+            <ListItem>Colaborador de CEISS INTEC</ListItem>
+            <ListItem textColor='tertiary'>Front-End Dev (React y su ecosistema)</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={3} fit caps lineHeight={1} textColor="secondary">
+              Manin, ¿Qué es React?
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={3} fit caps lineHeight={1} textColor="secondary">
+              Manin, ¿Qué es React?
+          </Heading>
+          <Heading size={6} lineHeight={1} textColor="white">
+            In a Nutshell: 8fi9
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} align={'flex-start center'} bgColor="primary" textColor="tertiary">
+          <Heading size={3} lineHeight={1} textColor="secondary">
+              React te permite hacer
+          </Heading>
+          <List textFont={'Poppins'}>
+            <ListItem>Single Page Apps (SAPs)</ListItem>
+            <ListItem>Progressive Web Apps (PWAs)</ListItem>
+            <ListItem>Static Sites (Blogs, etc)</ListItem>
+            <ListItem>Blah, blah, blah...</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="#111213" textColor="tertiary">
+          <Layout style={{alignItems: 'center'}}>
+            <Image width={'20%'} src={images.gatsby}></Image>
+            <Image width={'30%'} src={images.nextjs}></Image>
+            <Image width={'20%'} src={images.reaction}></Image>
+          </Layout>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={4} lineHeight={1} textColor="secondary">
+              Men, eso suena a una bazooka.
+          </Heading>
+          <Heading size={5} lineHeight={1} textColor="tertiary">
+              ¿Por qué usar React?
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={4} lineHeight={1} textColor="secondary">
+              Hagamos un App en vivo: 
+          </Heading>
+          <Heading size={5} lineHeight={1} textColor="tertiary">
+              El AlfApp 🔥
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={4} lineHeight={1} textColor="secondary">
+              El App:
+          </Heading>
+          <List textFont={'Poppins'}>
+            <ListItem>Un mensaje: "la calle bota ..."</ListItem>
+            <ListItem>Un botón para alternar entre 'fuego fuego' y '🔥🔥'</ListItem>
+            <ListItem>Un GIF del alfa corriendo.</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={2} fit caps lineHeight={1} textColor="secondary">
+              live coding!
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={4}  caps lineHeight={1} textColor="secondary">
+              ¡Eso es todo!
+          </Heading>
+          <Text textColor={'white'} textFont={'Helvetica'}>Github 👨🏻‍💻- @Evalir</Text>
+          <Text textColor={'white'} textFont={'Helvetica'}>Twitter 🚀- @hievalir</Text>
+          <Text textColor={'white'} textFont={'Helvetica'}>Instagram 🔥- @henry.codes</Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+          <Heading size={4}  caps lineHeight={1} textColor="secondary">
+              ¿Preguntas?
+          </Heading>
         </Slide>
       </Deck>
     );
