@@ -85,6 +85,16 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['fade']} align={'flex-start center'} bgColor="primary" textColor="tertiary">
           <Heading size={3} lineHeight={1} textColor="secondary">
+              Filosofía de React
+          </Heading>
+          <List textFont={'Poppins'}>
+            <ListItem>Todo es un Componente</ListItem>
+            <ListItem>Unidirectional Data Flow</ListItem>
+            <ListItem>Nunca imperativo, siempre declarativo</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} align={'flex-start center'} bgColor="primary" textColor="tertiary">
+          <Heading size={3} lineHeight={1} textColor="secondary">
               React te permite hacer
           </Heading>
           <List textFont={'Poppins'}>
